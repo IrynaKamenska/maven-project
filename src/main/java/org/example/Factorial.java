@@ -2,8 +2,10 @@ package org.example;
 
 public class Factorial {
     public static void main(String[] args) {
-         factorialOfNumber(9);
-         factorialOfNumberWithWhile(9);
+//         factorialOfNumber(9);
+//         factorialOfNumberWithWhile(9);
+
+        System.out.println(multiplyNumbers(6));
     }
 
 
@@ -28,5 +30,20 @@ public class Factorial {
         System.out.println("factorial of: "+ number + " = " + factorial);
         return factorial;
     }
+
+
+    // factorial of n (n!) = 1 * 2 * 3 * 4 * ... * n
+
+    // 6 * 5 * 4 * 3* 2 * 1
+    static long multiplyNumbers(int number){
+        if(number >= 1) {
+            return number * multiplyNumbers(number-1);
+        } else {
+            return 1;
+        }
+
+    }
+
+
 
 }
