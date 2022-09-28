@@ -5,7 +5,9 @@ public class Factorial {
 //         factorialOfNumber(9);
 //         factorialOfNumberWithWhile(9);
 
-        System.out.println(multiplyNumbers(6));
+       int num = 6;
+       long factorial = factorialOf(num);
+        System.out.println("Factorial of "+ num + " is " + factorial);
     }
 
 
@@ -34,14 +36,13 @@ public class Factorial {
 
     // factorial of n (n!) = 1 * 2 * 3 * 4 * ... * n
 
-    // 6 * 5 * 4 * 3* 2 * 1
-    static long multiplyNumbers(int number){
-        if(number >= 1) {
-            return number * multiplyNumbers(number-1);
-        } else {
+    // 6 * 5 * 4 * 3 * 2 * 1 * 1 (for 0) = 720
+    static long factorialOf(int number){
+        if(number <= 0){
             return 1;
+        } else {
+            return number * factorialOf(number - 1);
         }
-
     }
 
 
