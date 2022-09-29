@@ -42,4 +42,9 @@ class FactorialTest {
         assertEquals(720, actual);
     }
 
+    @Test
+    public void factorialTest(){
+        assertEquals(1, Factorial.factorial(0));
+    }
+
 }
